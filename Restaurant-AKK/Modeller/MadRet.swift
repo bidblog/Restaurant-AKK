@@ -8,6 +8,7 @@
 
 import Foundation
 
+// BARE EN KOMMENTAR...
 
 struct MadRet : Codable {
 
