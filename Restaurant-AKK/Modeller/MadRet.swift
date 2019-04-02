@@ -10,6 +10,8 @@ import Foundation
 
 // BARE EN KOMMENTAR...
 
+// En lokal kommentar for at vise merge konflikt. 
+
 struct MadRet : Codable {
 
     // Det rå format som det ser ud i vore JSON
