@@ -1,0 +1,441 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF29D45522417EDD00312156 /* MadRetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF29D45422417EDC00312156 /* MadRetTableViewCell.swift */; };
+		AF2F165D222F01FE00E88B8A /* MenuKortDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2F165C222F01FE00E88B8A /* MenuKortDelegate.swift */; };
+		AF3A7E93221C918500CB5239 /* TjenerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A7E92221C918500CB5239 /* TjenerDelegate.swift */; };
+		AF42891E21F7A32F00FF1CD6 /* MadRet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF42891D21F7A32F00FF1CD6 /* MadRet.swift */; };
+		AF42892021F7A6FC00FF1CD6 /* Kategorier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF42891F21F7A6FC00FF1CD6 /* Kategorier.swift */; };
+		AF42892221F7AB1800FF1CD6 /* OrdreBekraeftelse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF42892121F7AB1800FF1CD6 /* OrdreBekraeftelse.swift */; };
+		AF42892521F7ABFD00FF1CD6 /* PreparationKald.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF42892421F7ABFD00FF1CD6 /* PreparationKald.swift */; };
+		AF42892821F7AD0C00FF1CD6 /* RestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF42892721F7AD0C00FF1CD6 /* RestaurantController.swift */; };
+		AF8432F52213588E008D5FFF /* BestilKnap.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8432F42213588E008D5FFF /* BestilKnap.swift */; };
+		AFCAD55921EE6F3D0005728F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCAD55821EE6F3D0005728F /* AppDelegate.swift */; };
+		AFCAD55E21EE6F3D0005728F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFCAD55C21EE6F3D0005728F /* Main.storyboard */; };
+		AFCAD56021EE6F400005728F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFCAD55F21EE6F400005728F /* Assets.xcassets */; };
+		AFCAD56321EE6F400005728F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFCAD56121EE6F400005728F /* LaunchScreen.storyboard */; };
+		AFCAD56C21EE73CC0005728F /* KategoriTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCAD56B21EE73CC0005728F /* KategoriTableViewController.swift */; };
+		AFCAD56E21EE73F40005728F /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCAD56D21EE73F40005728F /* MenuTableViewController.swift */; };
+		AFCAD57021EE741E0005728F /* MadRetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCAD56F21EE741E0005728F /* MadRetViewController.swift */; };
+		AFCAD57221EE743D0005728F /* OrdreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCAD57121EE743D0005728F /* OrdreTableViewController.swift */; };
+		AFCAD57421EE746B0005728F /* BestillingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCAD57321EE746B0005728F /* BestillingViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AF29D45422417EDC00312156 /* MadRetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MadRetTableViewCell.swift; sourceTree = "<group>"; };
+		AF2F165C222F01FE00E88B8A /* MenuKortDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuKortDelegate.swift; sourceTree = "<group>"; };
+		AF3A7E92221C918500CB5239 /* TjenerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TjenerDelegate.swift; sourceTree = "<group>"; };
+		AF42891D21F7A32F00FF1CD6 /* MadRet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MadRet.swift; sourceTree = "<group>"; };
+		AF42891F21F7A6FC00FF1CD6 /* Kategorier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kategorier.swift; sourceTree = "<group>"; };
+		AF42892121F7AB1800FF1CD6 /* OrdreBekraeftelse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdreBekraeftelse.swift; sourceTree = "<group>"; };
+		AF42892421F7ABFD00FF1CD6 /* PreparationKald.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreparationKald.swift; sourceTree = "<group>"; };
+		AF42892721F7AD0C00FF1CD6 /* RestaurantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantController.swift; sourceTree = "<group>"; };
+		AF8432F42213588E008D5FFF /* BestilKnap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestilKnap.swift; sourceTree = "<group>"; };
+		AFCAD55521EE6F3D0005728F /* Restaurant-AKK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Restaurant-AKK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFCAD55821EE6F3D0005728F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AFCAD55D21EE6F3D0005728F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AFCAD55F21EE6F400005728F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AFCAD56221EE6F400005728F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AFCAD56421EE6F400005728F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFCAD56B21EE73CC0005728F /* KategoriTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KategoriTableViewController.swift; sourceTree = "<group>"; };
+		AFCAD56D21EE73F40005728F /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		AFCAD56F21EE741E0005728F /* MadRetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MadRetViewController.swift; sourceTree = "<group>"; };
+		AFCAD57121EE743D0005728F /* OrdreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdreTableViewController.swift; sourceTree = "<group>"; };
+		AFCAD57321EE746B0005728F /* BestillingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestillingViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AFCAD55221EE6F3D0005728F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF3A7E91221C915C00CB5239 /* Protokoller */ = {
+			isa = PBXGroup;
+			children = (
+				AF3A7E92221C918500CB5239 /* TjenerDelegate.swift */,
+				AF2F165C222F01FE00E88B8A /* MenuKortDelegate.swift */,
+			);
+			path = Protokoller;
+			sourceTree = "<group>";
+		};
+		AF42891C21F7A2FE00FF1CD6 /* Modeller */ = {
+			isa = PBXGroup;
+			children = (
+				AF42891D21F7A32F00FF1CD6 /* MadRet.swift */,
+				AF42891F21F7A6FC00FF1CD6 /* Kategorier.swift */,
+				AF42892121F7AB1800FF1CD6 /* OrdreBekraeftelse.swift */,
+			);
+			path = Modeller;
+			sourceTree = "<group>";
+		};
+		AF42892321F7ABE900FF1CD6 /* Paw */ = {
+			isa = PBXGroup;
+			children = (
+				AF42892421F7ABFD00FF1CD6 /* PreparationKald.swift */,
+			);
+			path = Paw;
+			sourceTree = "<group>";
+		};
+		AF42892621F7ACF100FF1CD6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AF42892721F7AD0C00FF1CD6 /* RestaurantController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AF8432F32213586E008D5FFF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AF8432F42213588E008D5FFF /* BestilKnap.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AFCAD54C21EE6F3D0005728F = {
+			isa = PBXGroup;
+			children = (
+				AFCAD55721EE6F3D0005728F /* Restaurant-AKK */,
+				AFCAD55621EE6F3D0005728F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AFCAD55621EE6F3D0005728F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AFCAD55521EE6F3D0005728F /* Restaurant-AKK.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AFCAD55721EE6F3D0005728F /* Restaurant-AKK */ = {
+			isa = PBXGroup;
+			children = (
+				AF3A7E91221C915C00CB5239 /* Protokoller */,
+				AF8432F32213586E008D5FFF /* Views */,
+				AF42892621F7ACF100FF1CD6 /* Controller */,
+				AF42892321F7ABE900FF1CD6 /* Paw */,
+				AF42891C21F7A2FE00FF1CD6 /* Modeller */,
+				AFCAD56A21EE73950005728F /* ViewController */,
+				AFCAD55821EE6F3D0005728F /* AppDelegate.swift */,
+				AFCAD55C21EE6F3D0005728F /* Main.storyboard */,
+				AFCAD55F21EE6F400005728F /* Assets.xcassets */,
+				AFCAD56121EE6F400005728F /* LaunchScreen.storyboard */,
+				AFCAD56421EE6F400005728F /* Info.plist */,
+			);
+			path = "Restaurant-AKK";
+			sourceTree = "<group>";
+		};
+		AFCAD56A21EE73950005728F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AFCAD56B21EE73CC0005728F /* KategoriTableViewController.swift */,
+				AFCAD56D21EE73F40005728F /* MenuTableViewController.swift */,
+				AFCAD56F21EE741E0005728F /* MadRetViewController.swift */,
+				AFCAD57121EE743D0005728F /* OrdreTableViewController.swift */,
+				AFCAD57321EE746B0005728F /* BestillingViewController.swift */,
+				AF29D45422417EDC00312156 /* MadRetTableViewCell.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AFCAD55421EE6F3D0005728F /* Restaurant-AKK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFCAD56721EE6F400005728F /* Build configuration list for PBXNativeTarget "Restaurant-AKK" */;
+			buildPhases = (
+				AFCAD55121EE6F3D0005728F /* Sources */,
+				AFCAD55221EE6F3D0005728F /* Frameworks */,
+				AFCAD55321EE6F3D0005728F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Restaurant-AKK";
+			productName = "Restaurant-AKK";
+			productReference = AFCAD55521EE6F3D0005728F /* Restaurant-AKK.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AFCAD54D21EE6F3D0005728F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = bidblog;
+				TargetAttributes = {
+					AFCAD55421EE6F3D0005728F = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = AFCAD55021EE6F3D0005728F /* Build configuration list for PBXProject "Restaurant-AKK" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AFCAD54C21EE6F3D0005728F;
+			productRefGroup = AFCAD55621EE6F3D0005728F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AFCAD55421EE6F3D0005728F /* Restaurant-AKK */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AFCAD55321EE6F3D0005728F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFCAD56321EE6F400005728F /* LaunchScreen.storyboard in Resources */,
+				AFCAD56021EE6F400005728F /* Assets.xcassets in Resources */,
+				AFCAD55E21EE6F3D0005728F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AFCAD55121EE6F3D0005728F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF42892021F7A6FC00FF1CD6 /* Kategorier.swift in Sources */,
+				AFCAD55921EE6F3D0005728F /* AppDelegate.swift in Sources */,
+				AFCAD57021EE741E0005728F /* MadRetViewController.swift in Sources */,
+				AFCAD56C21EE73CC0005728F /* KategoriTableViewController.swift in Sources */,
+				AF8432F52213588E008D5FFF /* BestilKnap.swift in Sources */,
+				AF42891E21F7A32F00FF1CD6 /* MadRet.swift in Sources */,
+				AFCAD56E21EE73F40005728F /* MenuTableViewController.swift in Sources */,
+				AFCAD57221EE743D0005728F /* OrdreTableViewController.swift in Sources */,
+				AF42892221F7AB1800FF1CD6 /* OrdreBekraeftelse.swift in Sources */,
+				AF2F165D222F01FE00E88B8A /* MenuKortDelegate.swift in Sources */,
+				AFCAD57421EE746B0005728F /* BestillingViewController.swift in Sources */,
+				AF42892821F7AD0C00FF1CD6 /* RestaurantController.swift in Sources */,
+				AF42892521F7ABFD00FF1CD6 /* PreparationKald.swift in Sources */,
+				AF3A7E93221C918500CB5239 /* TjenerDelegate.swift in Sources */,
+				AF29D45522417EDD00312156 /* MadRetTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AFCAD55C21EE6F3D0005728F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AFCAD55D21EE6F3D0005728F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AFCAD56121EE6F400005728F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AFCAD56221EE6F400005728F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AFCAD56521EE6F400005728F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AFCAD56621EE6F400005728F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AFCAD56821EE6F400005728F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 27AUH9DN58;
+				INFOPLIST_FILE = "Restaurant-AKK/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dk.bidblog.Restaurant-AKK";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AFCAD56921EE6F400005728F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 27AUH9DN58;
+				INFOPLIST_FILE = "Restaurant-AKK/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dk.bidblog.Restaurant-AKK";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AFCAD55021EE6F3D0005728F /* Build configuration list for PBXProject "Restaurant-AKK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFCAD56521EE6F400005728F /* Debug */,
+				AFCAD56621EE6F400005728F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFCAD56721EE6F400005728F /* Build configuration list for PBXNativeTarget "Restaurant-AKK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFCAD56821EE6F400005728F /* Debug */,
+				AFCAD56921EE6F400005728F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AFCAD54D21EE6F3D0005728F /* Project object */;
+}
