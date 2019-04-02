@@ -8,9 +8,6 @@
 
 import Foundation
 
-// BARE EN KOMMENTAR...
-
-// En lokal kommentar for at vise merge konflikt. 
 
 struct MadRet : Codable {
 
