@@ -12,7 +12,12 @@ import UIKit
 class RestaurantController {
     
     // Vi laver en variabel til at holde den delte ordreseddel for den akutelle ordre.
-    var aktuelOrdre = OrdreSeddel()
+    var aktuelOrdre = OrdreSeddel() {
+        // Vi sender en besked hver gang der ændres i vores ordre
+        didSet {
+            NotificationCenter.default.post(name: Notification.Name(RestaurantController.ordreOpdNotifikationsNavn), object: nil)
+        }
+    }
     
     let basisUrl = URL(string: "http://localhost:8090/")!
     
