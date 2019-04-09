@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OrdreTableViewController: UITableViewController, TjenerDelegate {
+class OrdreTableViewController: UITableViewController {
     
     // Variabel der indeholder leveringstidsvar vi får fra serveren
     var leveringsMinutter : Int?
@@ -176,17 +176,6 @@ class OrdreTableViewController: UITableViewController, TjenerDelegate {
     */
 
     // MARK: - Delegate
-    func madRetTilOrdren(madRet: MadRet) {
-        // Vi har modtaget en madret. Vi gemmer den på vores model. Vi tilføjer den til vores liste.
-        RestaurantController.shared.aktuelOrdre.madRetter.append(madRet)
-        
-        // Så tilføjer jeg madretten til det visuelle tableview.
-        let placering = IndexPath(row: (RestaurantController.shared.aktuelOrdre.madRetter.count - 1), section: 0)
-        tableView.insertRows(at: [placering], with: .automatic)
-        
-        // Så opdatere vi vores badge
-        opdaterBadge()
-    }
     
     // Her definerer vi menukortDelgate ved at finde frem til det skærmbillede der er aktivt på den anden tabside.
     func definerMenukortDelegate() -> MenukortDelegate? {
