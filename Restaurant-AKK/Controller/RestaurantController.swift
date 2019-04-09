@@ -178,4 +178,7 @@ class RestaurantController {
         print ("Pause i \(pauseSekunder) for \(forUrl)")
         sleep(pauseSekunder)
     }
+    
+    // Navn på "radiosignal" notifikationsId som sendes når ordre opdateres.
+    static let ordreOpdNotifikationsNavn = "dk.eat.just.ordreOpd"
 }
