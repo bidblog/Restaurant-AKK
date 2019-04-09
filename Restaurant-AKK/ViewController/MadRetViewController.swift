@@ -59,13 +59,6 @@ class MadRetViewController: UIViewController , MenukortDelegate {
         // Do any additional setup after loading the view.
         
         updateUI()
-        
-        // Vi sætter tjeneren
-        if tjenerDelegate == nil {
-            definerTjener()
-        }
-        
-        
     }
     
     func updateUI() {
@@ -85,19 +78,6 @@ class MadRetViewController: UIViewController , MenukortDelegate {
         }
     }
     // MARK : Delegate
-    
-    func definerTjener() {
-        // Her går vi gennem hierarkiet for at finde vores ordreseddel og sætte ordreseddlen som tjener.
-        if let navController = tabBarController?.viewControllers?.last as? UINavigationController {
-            
-            // Nu har vi fat i navigation controlleren som er far vil vores ordreseddel viewcontroller
-            if let tjenerController = navController.viewControllers.first as? OrdreTableViewController {
-                
-                // Nu har vi fanget vores OrdreTableViewController (vores tjener)
-                tjenerDelegate = tjenerController
-            }
-        }
-    }
     
     func startForfra() {
         // Vi laver lige en print bare for at se at koden hænger sammen.
