@@ -17,9 +17,6 @@ class MadRetViewController: UIViewController , MenukortDelegate {
     // Vores parameter ER også vores model
     var parmMadRet : MadRet!
     
-    // Vi definerer en tjener variabel som er den der skal tage imod vores bestilling
-    var tjenerDelegate : TjenerDelegate?
-    
     //MARK: Outlets
     @IBOutlet weak var bestilKnap: BestilKnap!
     
@@ -44,8 +41,6 @@ class MadRetViewController: UIViewController , MenukortDelegate {
         applikation.aktuelBestilling.append(parmMadRet)
         */
         
-        // I stedet for at bruge globale data så giver jeg ansvaret videre til vores delegate.
-        tjenerDelegate?.madRetTilOrdren(madRet: parmMadRet)
         
     }
     
