@@ -16,6 +16,7 @@
 		AF42892521F7ABFD00FF1CD6 /* PreparationKald.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF42892421F7ABFD00FF1CD6 /* PreparationKald.swift */; };
 		AF42892821F7AD0C00FF1CD6 /* RestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF42892721F7AD0C00FF1CD6 /* RestaurantController.swift */; };
 		AF8432F52213588E008D5FFF /* BestilKnap.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8432F42213588E008D5FFF /* BestilKnap.swift */; };
+		AF992165225D222E0045A039 /* OrdreSeddel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF992164225D222E0045A039 /* OrdreSeddel.swift */; };
 		AFCAD55921EE6F3D0005728F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCAD55821EE6F3D0005728F /* AppDelegate.swift */; };
 		AFCAD55E21EE6F3D0005728F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFCAD55C21EE6F3D0005728F /* Main.storyboard */; };
 		AFCAD56021EE6F400005728F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFCAD55F21EE6F400005728F /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 		AF42892421F7ABFD00FF1CD6 /* PreparationKald.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreparationKald.swift; sourceTree = "<group>"; };
 		AF42892721F7AD0C00FF1CD6 /* RestaurantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantController.swift; sourceTree = "<group>"; };
 		AF8432F42213588E008D5FFF /* BestilKnap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestilKnap.swift; sourceTree = "<group>"; };
+		AF992164225D222E0045A039 /* OrdreSeddel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdreSeddel.swift; sourceTree = "<group>"; };
 		AFCAD55521EE6F3D0005728F /* Restaurant-AKK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Restaurant-AKK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFCAD55821EE6F3D0005728F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFCAD55D21EE6F3D0005728F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				AF42891D21F7A32F00FF1CD6 /* MadRet.swift */,
 				AF42891F21F7A6FC00FF1CD6 /* Kategorier.swift */,
 				AF42892121F7AB1800FF1CD6 /* OrdreBekraeftelse.swift */,
+				AF992164225D222E0045A039 /* OrdreSeddel.swift */,
 			);
 			path = Modeller;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				AFCAD56E21EE73F40005728F /* MenuTableViewController.swift in Sources */,
 				AFCAD57221EE743D0005728F /* OrdreTableViewController.swift in Sources */,
 				AF42892221F7AB1800FF1CD6 /* OrdreBekraeftelse.swift in Sources */,
+				AF992165225D222E0045A039 /* OrdreSeddel.swift in Sources */,
 				AF2F165D222F01FE00E88B8A /* MenuKortDelegate.swift in Sources */,
 				AFCAD57421EE746B0005728F /* BestillingViewController.swift in Sources */,
 				AF42892821F7AD0C00FF1CD6 /* RestaurantController.swift in Sources */,
