@@ -55,16 +55,6 @@ class OrdreTableViewController: UITableViewController, TjenerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Vi tager fat i vores AppDelegate
-        let applikation = UIApplication.shared.delegate as! AppDelegate
-
-        print (applikation.aktuelBestilling)
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
         self.navigationItem.leftBarButtonItem = self.editButtonItem
     }
 
