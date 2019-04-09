@@ -52,8 +52,17 @@ class OrdreTableViewController: UITableViewController {
         super.viewDidLoad()
 
         self.navigationItem.leftBarButtonItem = self.editButtonItem
+        
+        // Jeg vil have besked når ordresedlen opdateres.
+        NotificationCenter.default.addObserver(self, selector: #selector(opdaterOrdreSeddel), name: Notification.Name(RestaurantController.ordreOpdNotifikationsNavn), object: nil)
     }
 
+    // Vi laver en funktion der skal afvikles når der kommer besked fra notifikationscenteret om at ordreseddlen er opdateret.
+    @objc func opdaterOrdreSeddel() {
+        tableView.reloadData()
+        opdaterBadge()
+    }
+    
     func opdaterBadge() {
         // Først finder jeg ud af hvad der skal stå i vores badge. En Badge er en optional streng. Så jeg kan sætte den til nil for at skjule den, eller jeg kan give den en streng værdi.
         let badgeTekst = RestaurantController.shared.aktuelOrdre.madRetter.count > 0 ? "\(RestaurantController.shared.aktuelOrdre.madRetter.count)" : nil
@@ -148,9 +157,6 @@ class OrdreTableViewController: UITableViewController {
         if editingStyle == .delete {
             // Delete the row from the data source
             RestaurantController.shared.aktuelOrdre.madRetter.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-            // Husk at opdatere badge
-            opdaterBadge()
         }
         /*
         else if editingStyle == .insert {
