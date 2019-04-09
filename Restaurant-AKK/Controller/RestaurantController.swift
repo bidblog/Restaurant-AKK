@@ -10,6 +10,15 @@ import Foundation
 import UIKit
 
 class RestaurantController {
+    
+    // Vi laver en variabel til at holde den delte ordreseddel for den akutelle ordre.
+    var aktuelOrdre = OrdreSeddel() {
+        // Vi sender en besked hver gang der ændres i vores ordre
+        didSet {
+            NotificationCenter.default.post(name: Notification.Name(RestaurantController.ordreOpdNotifikationsNavn), object: nil)
+        }
+    }
+    
     let basisUrl = URL(string: "http://localhost:8090/")!
     
     // Funktion der via en GET giver os en liste over kategorier som vi så kan bruge til at hente menukortet.
@@ -174,4 +183,7 @@ class RestaurantController {
         print ("Pause i \(pauseSekunder) for \(forUrl)")
         sleep(pauseSekunder)
     }
+    
+    // Navn på "radiosignal" notifikationsId som sendes når ordre opdateres.
+    static let ordreOpdNotifikationsNavn = "dk.eat.just.ordreOpd"
 }

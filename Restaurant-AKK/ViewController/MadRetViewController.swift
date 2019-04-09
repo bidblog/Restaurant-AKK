@@ -17,9 +17,6 @@ class MadRetViewController: UIViewController , MenukortDelegate {
     // Vores parameter ER også vores model
     var parmMadRet : MadRet!
     
-    // Vi definerer en tjener variabel som er den der skal tage imod vores bestilling
-    var tjenerDelegate : TjenerDelegate?
-    
     //MARK: Outlets
     @IBOutlet weak var bestilKnap: BestilKnap!
     
@@ -36,17 +33,8 @@ class MadRetViewController: UIViewController , MenukortDelegate {
     @IBAction func bestilKnapKlikket(_ sender: BestilKnap) {
         sender.klikAnimation()
         
-        /*
-        // Vi tager fat i vores AppDelegate
-        let applikation = UIApplication.shared.delegate as! AppDelegate
-        
-        // Så kan vi gemme vores valgte madret i vores globale data
-        applikation.aktuelBestilling.append(parmMadRet)
-        */
-        
-        // I stedet for at bruge globale data så giver jeg ansvaret videre til vores delegate.
-        tjenerDelegate?.madRetTilOrdren(madRet: parmMadRet)
-        
+        // Tilføjer madretten til den delte ressource.
+        RestaurantController.shared.aktuelOrdre.tilføjMadRet(madRet: parmMadRet)
     }
     
     //MARK: Layout
@@ -59,13 +47,6 @@ class MadRetViewController: UIViewController , MenukortDelegate {
         // Do any additional setup after loading the view.
         
         updateUI()
-        
-        // Vi sætter tjeneren
-        if tjenerDelegate == nil {
-            definerTjener()
-        }
-        
-        
     }
     
     func updateUI() {
@@ -85,19 +66,6 @@ class MadRetViewController: UIViewController , MenukortDelegate {
         }
     }
     // MARK : Delegate
-    
-    func definerTjener() {
-        // Her går vi gennem hierarkiet for at finde vores ordreseddel og sætte ordreseddlen som tjener.
-        if let navController = tabBarController?.viewControllers?.last as? UINavigationController {
-            
-            // Nu har vi fat i navigation controlleren som er far vil vores ordreseddel viewcontroller
-            if let tjenerController = navController.viewControllers.first as? OrdreTableViewController {
-                
-                // Nu har vi fanget vores OrdreTableViewController (vores tjener)
-                tjenerDelegate = tjenerController
-            }
-        }
-    }
     
     func startForfra() {
         // Vi laver lige en print bare for at se at koden hænger sammen.
