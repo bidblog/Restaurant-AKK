@@ -33,15 +33,8 @@ class MadRetViewController: UIViewController , MenukortDelegate {
     @IBAction func bestilKnapKlikket(_ sender: BestilKnap) {
         sender.klikAnimation()
         
-        /*
-        // Vi tager fat i vores AppDelegate
-        let applikation = UIApplication.shared.delegate as! AppDelegate
-        
-        // Så kan vi gemme vores valgte madret i vores globale data
-        applikation.aktuelBestilling.append(parmMadRet)
-        */
-        
-        
+        // Tilføjer madretten til den delte ressource.
+        RestaurantController.shared.aktuelOrdre.tilføjMadRet(madRet: parmMadRet)
     }
     
     //MARK: Layout
