@@ -10,6 +10,10 @@ import Foundation
 import UIKit
 
 class RestaurantController {
+    
+    // Vi laver en variabel til at holde den delte ordreseddel for den akutelle ordre.
+    var aktuelOrdre = OrdreSeddel()
+    
     let basisUrl = URL(string: "http://localhost:8090/")!
     
     // Funktion der via en GET giver os en liste over kategorier som vi så kan bruge til at hente menukortet.
