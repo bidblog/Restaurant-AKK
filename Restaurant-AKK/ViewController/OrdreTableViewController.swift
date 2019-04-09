@@ -12,7 +12,7 @@ class OrdreTableViewController: UITableViewController, TjenerDelegate {
     
 
     // Vi skal have en model til vores datasource
-    var madRetter = [MadRet]()
+    var ordreSeddel = OrdreSeddel()
     
     // Variabel der indeholder leveringstidsvar vi får fra serveren
     var leveringsMinutter : Int?
@@ -23,7 +23,7 @@ class OrdreTableViewController: UITableViewController, TjenerDelegate {
     @IBAction func bestilKnapTrykket(_ sender: UIBarButtonItem) {
         
         //Først finder jeg ud af min ordretotal
-        let ordreTotal = madRetter.reduce(0.0) { (subtotal, madRet) -> Double in
+        let ordreTotal = ordreSeddel.madRetter.reduce(0.0) { (subtotal, madRet) -> Double in
             return subtotal + madRet.pris
         }
         
@@ -70,7 +70,7 @@ class OrdreTableViewController: UITableViewController, TjenerDelegate {
 
     func opdaterBadge() {
         // Først finder jeg ud af hvad der skal stå i vores badge. En Badge er en optional streng. Så jeg kan sætte den til nil for at skjule den, eller jeg kan give den en streng værdi.
-        let badgeTekst = madRetter.count > 0 ? "\(madRetter.count)" : nil
+        let badgeTekst = ordreSeddel.madRetter.count > 0 ? "\(ordreSeddel.madRetter.count)" : nil
         
         // Vores tabbar ikon ligger navigationController
         navigationController?.tabBarItem.badgeValue = badgeTekst
@@ -83,7 +83,7 @@ class OrdreTableViewController: UITableViewController, TjenerDelegate {
         //Vi laver en print så vi kan se at vi kalder koden
         print ("Nu bestiller vi maden")
         
-        let madRetNumre = madRetter.map { $0.retNummer }
+        let madRetNumre = ordreSeddel.madRetter.map { $0.retNummer }
         
         print (madRetNumre)
         
@@ -113,14 +113,14 @@ class OrdreTableViewController: UITableViewController, TjenerDelegate {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return madRetter.count
+        return ordreSeddel.madRetter.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ordreListeCelle", for: indexPath)
         
         // Configure the cell...
-        let madRet = madRetter[indexPath.row]
+        let madRet = ordreSeddel.madRetter[indexPath.row]
         
         // Udfylder jeg cellens outlets
         cell.textLabel?.text = madRet.navn
@@ -161,7 +161,7 @@ class OrdreTableViewController: UITableViewController, TjenerDelegate {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            madRetter.remove(at: indexPath.row)
+            ordreSeddel.madRetter.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             // Husk at opdatere badge
             opdaterBadge()
@@ -192,10 +192,10 @@ class OrdreTableViewController: UITableViewController, TjenerDelegate {
     // MARK: - Delegate
     func madRetTilOrdren(madRet: MadRet) {
         // Vi har modtaget en madret. Vi gemmer den på vores model. Vi tilføjer den til vores liste.
-        madRetter.append(madRet)
+        ordreSeddel.madRetter.append(madRet)
         
         // Så tilføjer jeg madretten til det visuelle tableview.
-        let placering = IndexPath(row: (madRetter.count - 1), section: 0)
+        let placering = IndexPath(row: (ordreSeddel.madRetter.count - 1), section: 0)
         tableView.insertRows(at: [placering], with: .automatic)
         
         // Så opdatere vi vores badge
@@ -249,7 +249,7 @@ class OrdreTableViewController: UITableViewController, TjenerDelegate {
             // Så har brugeren set leveringstidspunktet og jeg kan rydde op
             
             // Først rydder vi data
-            madRetter.removeAll()
+            ordreSeddel.madRetter.removeAll()
             
             // Så opdaterer vi viewet
             tableView.reloadData()
