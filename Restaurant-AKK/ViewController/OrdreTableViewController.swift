@@ -136,6 +136,8 @@ class OrdreTableViewController: UITableViewController {
                 }
                 
                 cell.imageView?.image = hentetBillede
+                // Vi har opdateret vores interface, men vi skal huske at fortællet at layoutmotoren gerne må gentegne sig selv med alle de regler der gælder.
+                cell.setNeedsLayout()
             }
         }
         
