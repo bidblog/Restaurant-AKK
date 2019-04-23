@@ -15,6 +15,7 @@
 		AF42892221F7AB1800FF1CD6 /* OrdreBekraeftelse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF42892121F7AB1800FF1CD6 /* OrdreBekraeftelse.swift */; };
 		AF42892521F7ABFD00FF1CD6 /* PreparationKald.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF42892421F7ABFD00FF1CD6 /* PreparationKald.swift */; };
 		AF42892821F7AD0C00FF1CD6 /* RestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF42892721F7AD0C00FF1CD6 /* RestaurantController.swift */; };
+		AF4618E2226F952C00451987 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4618E1226F952C00451987 /* MainTabBarController.swift */; };
 		AF8432F52213588E008D5FFF /* BestilKnap.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8432F42213588E008D5FFF /* BestilKnap.swift */; };
 		AF992165225D222E0045A039 /* OrdreSeddel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF992164225D222E0045A039 /* OrdreSeddel.swift */; };
 		AFCAD55921EE6F3D0005728F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCAD55821EE6F3D0005728F /* AppDelegate.swift */; };
@@ -37,6 +38,7 @@
 		AF42892121F7AB1800FF1CD6 /* OrdreBekraeftelse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdreBekraeftelse.swift; sourceTree = "<group>"; };
 		AF42892421F7ABFD00FF1CD6 /* PreparationKald.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreparationKald.swift; sourceTree = "<group>"; };
 		AF42892721F7AD0C00FF1CD6 /* RestaurantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantController.swift; sourceTree = "<group>"; };
+		AF4618E1226F952C00451987 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		AF8432F42213588E008D5FFF /* BestilKnap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestilKnap.swift; sourceTree = "<group>"; };
 		AF992164225D222E0045A039 /* OrdreSeddel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdreSeddel.swift; sourceTree = "<group>"; };
 		AFCAD55521EE6F3D0005728F /* Restaurant-AKK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Restaurant-AKK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				AF42892721F7AD0C00FF1CD6 /* RestaurantController.swift */,
+				AF4618E1226F952C00451987 /* MainTabBarController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				AF42892521F7ABFD00FF1CD6 /* PreparationKald.swift in Sources */,
 				AF3A7E93221C918500CB5239 /* TjenerDelegate.swift in Sources */,
 				AF29D45522417EDD00312156 /* MadRetTableViewCell.swift in Sources */,
+				AF4618E2226F952C00451987 /* MainTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
