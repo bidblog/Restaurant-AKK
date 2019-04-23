@@ -54,21 +54,12 @@ class OrdreTableViewController: UITableViewController {
         self.navigationItem.leftBarButtonItem = self.editButtonItem
         
         // Jeg vil have besked når ordresedlen opdateres.
-        NotificationCenter.default.addObserver(self, selector: #selector(opdaterOrdreSeddel), name: Notification.Name(RestaurantController.ordreOpdNotifikationsNavn), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(opdaterOrdreSeddel), name: RestaurantController.ordreOpdNotifikationsNavn, object: nil)        
     }
 
     // Vi laver en funktion der skal afvikles når der kommer besked fra notifikationscenteret om at ordreseddlen er opdateret.
     @objc func opdaterOrdreSeddel() {
         tableView.reloadData()
-        opdaterBadge()
-    }
-    
-    func opdaterBadge() {
-        // Først finder jeg ud af hvad der skal stå i vores badge. En Badge er en optional streng. Så jeg kan sætte den til nil for at skjule den, eller jeg kan give den en streng værdi.
-        let badgeTekst = RestaurantController.shared.aktuelOrdre.madRetter.count > 0 ? "\(RestaurantController.shared.aktuelOrdre.madRetter.count)" : nil
-        
-        // Vores tabbar ikon ligger navigationController
-        navigationController?.tabBarItem.badgeValue = badgeTekst
     }
     
     // Her laver vi en funktion der sørger for at bestille maden
@@ -136,6 +127,8 @@ class OrdreTableViewController: UITableViewController {
                 }
                 
                 cell.imageView?.image = hentetBillede
+                // Vi har opdateret vores interface, men vi skal huske at fortællet at layoutmotoren gerne må gentegne sig selv med alle de regler der gælder.
+                cell.setNeedsLayout()
             }
         }
         
@@ -234,9 +227,6 @@ class OrdreTableViewController: UITableViewController {
             
             // Så opdaterer vi viewet
             tableView.reloadData()
-            
-            // Vores badge opdateres
-            opdaterBadge()
             
             // Nulstiller menukortet
             definerMenukortDelegate()?.startForfra()

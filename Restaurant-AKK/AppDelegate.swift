@@ -33,6 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Vi kalder vores funktion der spørger om vi må sende notifikationer
         tilladNotifikationer()
     
+        // Kald badge opdaterings funktion når ordresedlen ændrer sig
+        MainTabBarController.shared.tilmeldObserver()
         
         return true
     }

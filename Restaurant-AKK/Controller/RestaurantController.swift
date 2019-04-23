@@ -15,7 +15,7 @@ class RestaurantController {
     var aktuelOrdre = OrdreSeddel() {
         // Vi sender en besked hver gang der ændres i vores ordre
         didSet {
-            NotificationCenter.default.post(name: Notification.Name(RestaurantController.ordreOpdNotifikationsNavn), object: nil)
+            NotificationCenter.default.post(name: RestaurantController.ordreOpdNotifikationsNavn, object: nil)
         }
     }
     
@@ -185,5 +185,5 @@ class RestaurantController {
     }
     
     // Navn på "radiosignal" notifikationsId som sendes når ordre opdateres.
-    static let ordreOpdNotifikationsNavn = "dk.eat.just.ordreOpd"
+    static let ordreOpdNotifikationsNavn = Notification.Name("dk.eat.just.ordreOpd")
 }
