@@ -84,5 +84,17 @@ class MadRetViewController: UIViewController , MenukortDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+    // Enum keys til save og load state.
+    // Formålet er at have eet sted hvor jeg retter state Id navne
+    enum Keys : String {
+        case retNummer = "madretNummer"
+    }
 
+    override func encodeRestorableState(with coder: NSCoder) {
+        // HER skal vi gemme det data der skal til for at vores viewcontroller kan starte op fra gemt tilstand.
+        
+        coder.encode(parmMadRet.retNummer, forKey: Keys.retNummer.rawValue)
+        
+        super.encodeRestorableState(with: coder)
+    }
 }
