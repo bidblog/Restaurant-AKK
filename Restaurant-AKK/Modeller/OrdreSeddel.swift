@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct OrdreSeddel {
+struct OrdreSeddel : Codable {
     // Et array af madretter på ordresedlen
     var madRetter : [MadRet]
     
@@ -20,5 +20,15 @@ struct OrdreSeddel {
     // Jeg laver en funktion til at tilføje en madret til ordren.
     public mutating func tilføjMadRet(madRet : MadRet) {
         self.madRetter.append(madRet)
+    }
+    
+    // URL til ordreseddel variabel
+    static var filURL : URL {
+        // URL til brugerns Dokumenter
+        let documentURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        
+        let ordreFilUrl = documentURL.appendingPathComponent("ordreSeddel").appendingPathExtension("json")
+        
+        return ordreFilUrl
     }
 }

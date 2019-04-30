@@ -36,6 +36,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Kald badge opdaterings funktion når ordresedlen ændrer sig
         MainTabBarController.shared.tilmeldObserver()
         
+        // Læse filen ordresedlen ind
+        RestaurantController.shared.loadOrdre()
+        
         return true
     }
 
@@ -47,6 +50,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        
+        // Save vores ordreseddel
+        RestaurantController.shared.saveOrdre()
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {

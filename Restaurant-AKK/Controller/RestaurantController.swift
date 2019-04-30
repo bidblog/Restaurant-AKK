@@ -174,6 +174,29 @@ class RestaurantController {
         task.resume()
     }
     
+    //MARK: OrdreFil
+    func loadOrdre() {
+        // Kan vi læse ordreseddel filen ind
+        guard let ordreData = try? Data(contentsOf: OrdreSeddel.filURL) else { return }
+        
+        // Hvis vi har en fil hentet ind skal vi lave den om fra json til ordreseddel
+        if let hentetOrdre = try? JSONDecoder().decode(OrdreSeddel.self, from: ordreData) {
+            aktuelOrdre = hentetOrdre
+            print ("Ordreseddel er hentet")
+        } else {
+            // Vi laver en tom ordreseddel
+            aktuelOrdre = OrdreSeddel()
+        }
+    }
+    
+    
+    func saveOrdre() {
+        if let ordreData = try? JSONEncoder().encode(aktuelOrdre) {
+            try? ordreData.write(to: OrdreSeddel.filURL)
+            print ("Ordreseddel er gemt")
+        }
+    }
+    
     //MARK: Static
     static let shared = RestaurantController()
     
