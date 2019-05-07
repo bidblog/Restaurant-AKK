@@ -13,8 +13,8 @@
         <!--Menu-->
         <scene sceneID="H2L-Dp-ZEO">
             <objects>
-                <tableViewController id="fVd-3A-6XI" customClass="KategoriTableViewController" customModule="Restaurant_AKK" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="KategoriTableViewController" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="FaG-0z-7UU">
+                <tableViewController storyboardIdentifier="KategoriTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fVd-3A-6XI" customClass="KategoriTableViewController" customModule="Restaurant_AKK" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="FaG-0z-7UU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -54,8 +54,8 @@
         <!--Title-->
         <scene sceneID="3E0-zh-QWY">
             <objects>
-                <tableViewController id="bNI-gz-9ai" customClass="MenuTableViewController" customModule="Restaurant_AKK" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MenuTableViewController" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hIy-3a-N1W">
+                <tableViewController storyboardIdentifier="MenuTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bNI-gz-9ai" customClass="MenuTableViewController" customModule="Restaurant_AKK" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hIy-3a-N1W">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -142,8 +142,8 @@
         <!--Mad Ret View Controller-->
         <scene sceneID="hRQ-Lf-1qX">
             <objects>
-                <viewController id="McP-3T-IJj" customClass="MadRetViewController" customModule="Restaurant_AKK" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" restorationIdentifier="MadRetTableViewController" id="Qol-eC-upJ">
+                <viewController storyboardIdentifier="MadRetTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="McP-3T-IJj" customClass="MadRetViewController" customModule="Restaurant_AKK" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qol-eC-upJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -247,8 +247,8 @@
         <!--Ordre-->
         <scene sceneID="AJn-14-1FC">
             <objects>
-                <tableViewController id="lAC-06-aip" customClass="OrdreTableViewController" customModule="Restaurant_AKK" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="OrdreTableViewController" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="5eZ-tp-DqX">
+                <tableViewController storyboardIdentifier="OrdreTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lAC-06-aip" customClass="OrdreTableViewController" customModule="Restaurant_AKK" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="5eZ-tp-DqX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -124,4 +124,20 @@ class MenuTableViewController: UITableViewController , MenukortDelegate {
         }
 
     }
+    
+    //MARK: State handling
+    
+    // Enum keys til save og load state.
+    // Formålet er at have eet sted hvor jeg retter state Id navne
+    enum Keys : String {
+        case madKategori = "madKategori"
+    }
+    
+    override func encodeRestorableState(with coder: NSCoder) {
+        // HER skal vi gemme det data der skal til for at vores viewcontroller kan starte op fra gemt tilstand.
+        
+        coder.encode(parmKategori, forKey: Keys.madKategori.rawValue)
+        
+        super.encodeRestorableState(with: coder)
+    }
 }
