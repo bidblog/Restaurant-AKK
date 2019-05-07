@@ -19,6 +19,9 @@ class RestaurantController {
         }
     }
     
+    // En variabel jeg kan gemme min restaurantStateController i
+    var stateController = RestaurantStateController()
+    
     let basisUrl = URL(string: "http://localhost:8090/")!
     
     // Funktion der via en GET giver os en liste over kategorier som vi så kan bruge til at hente menukortet.
@@ -73,7 +76,11 @@ class RestaurantController {
                 
                 let madRetter = try? dekoder.decode(MadRetter.self, from: serverSvar)
                 
+                //Vi opdaterer svar fra servren til lokal state
+                self.stateController.opdater(kategori: kategori, medMadretter: madRetter?.madretter)
+                
                 completion(madRetter?.madretter)
+                
             } else {
                 print ("Intet menukort svar fra serveren")
                 if let serverRespons = respons as? HTTPURLResponse {
@@ -195,6 +202,17 @@ class RestaurantController {
             try? ordreData.write(to: OrdreSeddel.filURL)
             print ("Ordreseddel er gemt")
         }
+    }
+    
+    // Styr state hent og gem ordre fil og kategoridata
+    public func saveStateData() {
+        self.saveOrdre()
+        self.stateController.saveState()
+    }
+    
+    public func loadStateData() {
+        self.loadOrdre()
+        self.stateController.restoreState()
     }
     
     //MARK: Static
