@@ -41,15 +41,17 @@ class MadRetViewController: UIViewController , MenukortDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Vi lige starter med at teste om vores parameter virker
-        print ("Overført parameter madRet = \(parmMadRet.navn)")
-
         // Do any additional setup after loading the view.
         
         updateUI()
     }
     
     func updateUI() {
+        
+        // Vi beskytter os mod at viewDidLoad kaldes før restoreState ved at hoppe ud hvis parameter ikke er sat.
+        guard let _ = parmMadRet else {return}
+        
+        
         // Her sætter vi så titel pris og beskrivelse, billedet kommer vi tilbage til.
         madRetTitel.text = parmMadRet.navn
         madRetPrisLabel.text = String(format: "Kr %.2f", parmMadRet.pris)
@@ -91,10 +93,27 @@ class MadRetViewController: UIViewController , MenukortDelegate {
     }
 
     override func encodeRestorableState(with coder: NSCoder) {
+        super.encodeRestorableState(with: coder)
+        
         // HER skal vi gemme det data der skal til for at vores viewcontroller kan starte op fra gemt tilstand.
         
         coder.encode(parmMadRet.retNummer, forKey: Keys.retNummer.rawValue)
         
-        super.encodeRestorableState(with: coder)
+       
+    }
+    
+    override func decodeRestorableState(with coder: NSCoder) {
+        
+        super.decodeRestorableState(with: coder)
+        
+        // Vi pakker den gemte id ud.
+        let retNummer = Int(coder.decodeInt32(forKey: Keys.retNummer.rawValue))
+        
+        // Vi har nu retnummeret, så skal vi slå retten op i vores egen state controller.
+        if let madRet = RestaurantController.shared.stateController.madRet(medId: retNummer) {
+            
+            parmMadRet = madRet
+            updateUI()
+        }
     }
 }

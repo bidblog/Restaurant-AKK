@@ -20,13 +20,17 @@ class MenuTableViewController: UITableViewController , MenukortDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Vi lige starter med at teste om vores parameter virker
-        print ("Overført parameter kategori = \(parmKategori)")
-        self.title = parmKategori.capitalized
+        // Hvis der er noget  i parmKategori, så ved jeg at vi er kaldt fra en segue i viewDidLoad.
+        // Hvis ikke så er der tale om at vi er i restore state tilstand for så sættes parmKategori senere.
+        if let _ = parmKategori {
+            hentRetterFraServer()
+        }
+        
+        updateUI()
+        
+    }
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
+    func hentRetterFraServer() {
         // Tænd for netværks indikatoren
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
@@ -36,7 +40,16 @@ class MenuTableViewController: UITableViewController , MenukortDelegate {
             }
         }
     }
-
+    
+    func updateUI() {
+        
+        guard let _ = parmKategori else {return}
+        
+        // Vi lige starter med at teste om vores parameter virker
+        print ("Overført parameter kategori = \(parmKategori)")
+        self.title = parmKategori.capitalized
+    }
+    
     func updateUI(med madRetter: [MadRet]) {
         
         // Her søger vi så for at sende vores menukort til afvikling på main queue fordi det er HER vi opdaterer brugergrænsefladen
@@ -139,5 +152,21 @@ class MenuTableViewController: UITableViewController , MenukortDelegate {
         coder.encode(parmKategori, forKey: Keys.madKategori.rawValue)
         
         super.encodeRestorableState(with: coder)
+    }
+    
+    override func decodeRestorableState(with coder: NSCoder) {
+        super.decodeRestorableState(with: coder)
+        
+        // Så dekoder jeg kategorien.
+        if let kategori = coder.decodeObject(forKey: Keys.madKategori.rawValue) as? String {
+            
+            // Så sætter vi parameter variablen som om jeg var kaldt af en segue.
+            parmKategori = kategori
+            
+            // Vi skal opdater UI
+            if let madRetter = RestaurantController.shared.stateController.madRetter(forKategori: kategori) {
+                self.updateUI(med: madRetter)
+            }
+        }
     }
 }
